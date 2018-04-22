@@ -1,5 +1,6 @@
-const React = require('react');
-const Popular = require('./Popular.jsx');
+import React from 'react';
+
+import Popular from './Popular.jsx';
 
 const App = props => (
   <div className="container">
@@ -17,4 +18,4 @@ const App = props => (
 //   }
 // }
 
-module.exports = App;
+export default App;
