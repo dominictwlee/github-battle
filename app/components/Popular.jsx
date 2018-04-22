@@ -6,13 +6,13 @@ function SelectLanguage(props) {
 
   return (
     <nav className="navbar-wrapper">
-      <ul className="lang-navbar">
+      <ul className="langs-nav">
         {languages.map(language => (
           <li
             style={language === props.selectedLanguage ? { color: '#d0021b' } : null}
             onClick={props.onSelect.bind(null, language)}
             key={language}
-            className="lang-nav-item"
+            className="langs-nav__item"
           >
             {language}
           </li>
