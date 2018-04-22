@@ -8,7 +8,22 @@ module.exports = {
     filename: 'index_bundle.js'
   },
   module: {
-    rules: [{ test: /\.jsx?$/, use: 'babel-loader' }, { test: /\.css$/, use: ['style-loader', 'css-loader'] }]
+    rules: [
+      { test: /\.jsx?$/, use: 'babel-loader' },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
+          'postcss-loader'
+        ]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({

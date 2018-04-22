@@ -1,14 +1,20 @@
 const React = require('react');
 const Popular = require('./Popular.jsx');
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="container">
-        <Popular />
-      </div>
-    );
-  }
-}
+const App = props => (
+  <div className="container">
+    <Popular />
+  </div>
+);
+
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <div className="container">
+//         <Popular />
+//       </div>
+//     );
+//   }
+// }
 
 module.exports = App;
