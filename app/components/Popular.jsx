@@ -41,7 +41,7 @@ const RepoGrid = props => (
           <li>
             <a href={repo.owner.html_url}>{repo.name}</a>
           </li>
-          <li>@{repo.name}</li>
+          <li>@{repo.owner.login}</li>
           <li>{repo.stargazers_count} stars</li>
         </ul>
       </li>
