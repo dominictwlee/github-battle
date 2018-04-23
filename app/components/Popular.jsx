@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import fetchPopularRepos from '../utils/api';
 
-const SelectLanguage = props => {
+const SelectLanguage = ({ selectedLanguage, onSelect }) => {
   const languages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python'];
 
   return (
@@ -11,8 +11,8 @@ const SelectLanguage = props => {
         {languages.map(language => (
           <li key={`${language}-li`} className="langs-nav__item">
             <button
-              style={language === props.selectedLanguage ? { color: '#ba2632' } : null}
-              onClick={props.onSelect.bind(null, language)}
+              style={language === selectedLanguage ? { color: '#ba2632' } : null}
+              onClick={() => onSelect(language)}
               key={language}
             >
               {language}
