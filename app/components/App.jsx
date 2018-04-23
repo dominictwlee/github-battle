@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Popular from './Popular.jsx';
+import Popular from './Popular';
 
 const App = props => (
   <div className="container">

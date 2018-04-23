@@ -7,6 +7,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
+  },
   module: {
     rules: [
       { test: /\.jsx?$/, use: 'babel-loader' },
