@@ -1,28 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Popular from './Popular';
 import MainNav from './Nav';
 import Home from './Home';
+import Battle from './Battle';
 
 const App = props => (
   <Router>
     <div className="container">
       <MainNav />
-      <Route exact path="/" component={Home} />
-      <Route path="/popular" component={Popular} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/popular" component={Popular} />
+        <Route path="/battle" component={Battle} />
+        <Route render={() => <p>Not Found</p>} />
+      </Switch>
     </div>
   </Router>
 );
-
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <div className="container">
-//         <Popular />
-//       </div>
-//     );
-//   }
-// }
 
 export default App;
