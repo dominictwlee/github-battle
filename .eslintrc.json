@@ -4,6 +4,13 @@
 		"prettier",
 		"prettier/react"
 	],
+	"rules": {
+		"jsx-a11y/anchor-is-valid": ["warn", {
+			"components": ["link"],
+			"specialLink": ["to"],
+			"aspects": ["noHref", "invalidHref", "preferButton"]
+			}]
+	},
 	"plugins": [
 		"prettier"
 	],
