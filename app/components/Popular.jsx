@@ -11,7 +11,7 @@ const SelectLanguage = props => {
         {languages.map(language => (
           <li key={`${language}-li`} className="langs-nav__item">
             <button
-              style={language === props.selectedLanguage ? { color: '#d0021b' } : null}
+              style={language === props.selectedLanguage ? { color: '#ba2632' } : null}
               onClick={props.onSelect.bind(null, language)}
               key={language}
             >
@@ -76,7 +76,6 @@ class Popular extends React.Component {
     fetchPopularRepos(language).then(repos => {
       this.setState(() => ({ repos }));
     });
-
   }
 
   render() {
