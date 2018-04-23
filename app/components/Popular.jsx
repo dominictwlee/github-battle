@@ -10,13 +10,13 @@ const SelectLanguage = props => {
       <ul className="langs-nav">
         {languages.map(language => (
           <li key={`${language}-li`} className="langs-nav__item">
-            <a
+            <button
               style={language === props.selectedLanguage ? { color: '#d0021b' } : null}
               onClick={props.onSelect.bind(null, language)}
               key={language}
             >
               {language}
-            </a>
+            </button>
           </li>
         ))}
       </ul>

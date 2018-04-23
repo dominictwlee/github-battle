@@ -16,6 +16,15 @@ a {
   text-decoration: none;
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
 .container {
   margin: 4% 15%;
 }
