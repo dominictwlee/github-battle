@@ -37,7 +37,7 @@ class PlayerForm extends React.Component {
           onChange={this.handleChange}
         />
 
-        <button className="button battle-button--spacing" type="submit" disabled={!this.state.username}>
+        <button className="button submit-button--spacing" type="submit" disabled={!this.state.username}>
           Submit
         </button>
       </form>

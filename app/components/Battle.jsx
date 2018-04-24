@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import PlayerForm from './PlayerForm';
 
@@ -56,6 +57,9 @@ class Battle extends React.Component {
 
   render() {
     const { playerOneName, playerTwoName, playerOneImage, playerTwoImage } = this.state;
+
+    const { match } = this.props;
+
     return (
       <div>
         <div className="row">
@@ -65,12 +69,26 @@ class Battle extends React.Component {
             <PlayerPreview avatar={playerOneImage} username={playerOneName} onReset={this.handleReset} id="playerOne" />
           )}
 
+          {!playerTwoName && <PlayerForm id="playerTwo" label="Player Two" onSubmit={this.handleSubmit} />}
+
           {playerTwoImage !== null && (
             <PlayerPreview avatar={playerTwoImage} username={playerTwoName} onReset={this.handleReset} id="playerTwo" />
           )}
-
-          {!playerTwoName && <PlayerForm id="playerTwo" label="Player Two" onSubmit={this.handleSubmit} />}
         </div>
+
+        {playerOneImage &&
+          playerTwoImage && (
+            <div className="button battle-button-wrapper">
+              <Link
+                to={{
+                  pathname: `${match.url}/results`,
+                  search: `?playerOneName=${playerOneName}&playerTwoName=${playerTwoName}`
+                }}
+              >
+                Battle
+              </Link>
+            </div>
+          )}
       </div>
     );
   }

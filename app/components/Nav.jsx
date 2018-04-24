@@ -5,17 +5,17 @@ const MainNav = () => (
   <nav className="main-nav-wrapper">
     <ul className="main-nav">
       <li className="main-nav__item">
-        <NavLink exact activeClassName="main-nav__item--active" to="/">
+        <NavLink exact activeClassName="main-nav__item--active main-nav__item--red" to="/">
           Home
         </NavLink>
       </li>
       <li className="main-nav__item">
-        <NavLink activeClassName="main-nav__item--active" to="/battle">
+        <NavLink activeClassName="main-nav__item--active main-nav__item--red" to="/battle">
           Battle
         </NavLink>
       </li>
       <li className="main-nav__item">
-        <NavLink activeClassName="main-nav__item--active" to="/popular">
+        <NavLink activeClassName="main-nav__item--active main-nav__item--red" to="/popular">
           Popular
         </NavLink>
       </li>

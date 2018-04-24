@@ -13,7 +13,6 @@ html {
 }
 
 a {
-  color:  var(--mainRed);
   cursor: pointer;
   text-decoration: none;
 }
@@ -34,6 +33,7 @@ h1 {
 
 .container {
   margin: 1% 15%;
+  text-align: center;
 }
 
 .langs-nav {
@@ -79,11 +79,13 @@ h1 {
 
 .main-nav {
   display: flex;
-
 }
 
 .main-nav__item {
   margin-left: 1.5rem;
+}
+.main-nav__item a {
+  color: var(--mainRed);
 }
 
 .main-nav__item--active {
@@ -100,8 +102,8 @@ h1 {
 .button {
   width: 15rem;
   padding: 0.8rem 0;
-  text-align: center;
   border-radius: 10px;
+  text-align: center;
   color: var(--mainWhite);
   font-weight: bold;
   background-color: var(--mainGrey);
@@ -150,7 +152,7 @@ h1 {
   font-size: 2rem;
 }
 
-.battle-button--spacing {
+.submit-button--spacing {
   margin: 1rem;
 }
 
@@ -165,4 +167,12 @@ h1 {
 
 .battle-profile__username, .battle-profile__avatar, .button--reset-button {
   margin-bottom: 1.2rem;
+}
+
+.battle-button-wrapper {
+  margin: 0 auto;
+}
+
+.battle-button-wrapper a {
+  color: var(--mainWhite);
 }
