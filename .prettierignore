@@ -1,2 +1,3 @@
 **/*.json
 /app/index.css
+/app/minireset.css
