@@ -1,6 +1,5 @@
 module.exports = {
   plugins: {
-    'postcss-cssnext': {},
-    'rucksack-css': {}
+    'postcss-cssnext': {}
   }
 };

@@ -83,7 +83,6 @@ h1 {
 }
 
 .button {
-  margin: 2rem;
   width: 15rem;
   padding: 0.8rem 0;
   text-align: center;
@@ -102,4 +101,38 @@ h1 {
 .button:active {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   transform: scale(0.96) translateY(2px);
+}
+
+.home-button--spacing {
+  margin: 2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.battle-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.battle-form__input {
+  border-radius: 3px;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 80%;
+}
+
+.battle-form__header {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.battle-button--spacing {
+  margin: 1rem;
 }
