@@ -51,4 +51,8 @@ PlayerForm.propTypes = {
   onSubmit: PropTypes.func.isRequired
 };
 
+PlayerForm.defaultProps = {
+  label: 'Username'
+};
+
 export default PlayerForm;

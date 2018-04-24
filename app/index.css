@@ -15,6 +15,7 @@ html {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: var(--mainRed);
 }
 
 button {
@@ -84,9 +85,6 @@ h1 {
 .main-nav__item {
   margin-left: 1.5rem;
 }
-.main-nav__item a {
-  color: var(--mainRed);
-}
 
 .main-nav__item--active {
   font-weight: bold;
@@ -100,12 +98,12 @@ h1 {
 }
 
 .button {
-  width: 15rem;
-  padding: 0.8rem 0;
+  width: 10rem;
+  padding: 0.7rem 0;
   border-radius: 10px;
   text-align: center;
   color: var(--mainWhite);
-  font-weight: bold;
+  font-size: 1.2rem;
   background-color: var(--mainGrey);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.1s linear;
@@ -175,4 +173,14 @@ h1 {
 
 .battle-button-wrapper a {
   color: var(--mainWhite);
+}
+
+.results-header {
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.results-score {
+  font-weight: bold;
+
 }
