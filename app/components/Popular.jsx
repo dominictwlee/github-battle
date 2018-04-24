@@ -33,16 +33,16 @@ const RepoGrid = props => (
   <ul className="popular-list">
     {props.repos.map((repo, index) => (
       <li key={repo.name} className="popular-list__item">
-        <h1 className="ranking">#{index + 1}</h1>
+        <h1 className="profile-rank">#{index + 1}</h1>
         <ul className="profile-details">
-          <li>
+          <li className="profile-details--spacing">
             <img className="profile-details__avatar" src={repo.owner.avatar_url} alt={`Avatar for ${repo.name}`} />
           </li>
-          <li>
+          <li className="profile-details--spacing">
             <a href={repo.owner.html_url}>{repo.name}</a>
           </li>
-          <li>@{repo.owner.login}</li>
-          <li>{repo.stargazers_count} stars</li>
+          <li className="profile-details--spacing">@{repo.owner.login}</li>
+          <li className="profile-details--spacing">{repo.stargazers_count} stars</li>
         </ul>
       </li>
     ))}

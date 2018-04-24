@@ -24,7 +24,7 @@ class PlayerForm extends React.Component {
   }
   render() {
     return (
-      <form className="battle-form" onSubmit={this.handleSubmit}>
+      <form className="battle-form battle-column" onSubmit={this.handleSubmit}>
         <label className="battle-form__header" htmlFor="username">
           {this.props.label}
         </label>

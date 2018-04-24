@@ -1,14 +1,19 @@
-
+:root {
+  --mainBlack: #1a262b;
+  --mainRed: #ba2632;
+  --mainGrey: #2a3d45;
+  --mainWhite: #ecebe4;
+}
 html {
   font-family: sans-serif;
   font-size: 16px;
-  color: #1a262b;
+  color: var(--mainBlack);
   min-height: 100vh;
   min-width: 300px;
 }
 
 a {
-  color: #ba2632;
+  color:  var(--mainRed);
   cursor: pointer;
   text-decoration: none;
 }
@@ -55,11 +60,19 @@ h1 {
 }
 
 .popular-list__item {
-  margin: 1.25rem;
+  margin: 1.5rem;
   text-align: center;
 }
 
-.profile-details__avatar {
+.profile-details--spacing {
+  margin-bottom: 0.2rem;
+}
+
+.profile-rank {
+  margin-bottom: 1.7rem;
+}
+
+.profile-details__avatar, .battle-profile__avatar {
   width: 9.5rem;
   border-radius: 100%;
 }
@@ -89,15 +102,15 @@ h1 {
   padding: 0.8rem 0;
   text-align: center;
   border-radius: 10px;
-  color: #ecebe4;
+  color: var(--mainWhite);
   font-weight: bold;
-  background-color: #2a3d45;
+  background-color: var(--mainGrey);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.2s linear;
+  transition: box-shadow 0.1s linear;
 }
 
 .button:hover,
-.battle-button:focus {
+.button:focus {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
 
@@ -116,12 +129,12 @@ h1 {
   justify-content: space-around;
 }
 
-.battle-form {
+.battle-column {
   display: flex;
   flex-direction: column;
   width: 31rem;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .battle-form__input {
@@ -139,4 +152,17 @@ h1 {
 
 .battle-button--spacing {
   margin: 1rem;
+}
+
+.battle-profile__username {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.button--reset-button {
+  background-color: var(--mainRed);
+}
+
+.battle-profile__username, .battle-profile__avatar, .button--reset-button {
+  margin-bottom: 1.2rem;
 }
