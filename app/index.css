@@ -182,5 +182,8 @@ h1 {
 
 .results-score {
   font-weight: bold;
+}
 
+.error-message {
+  margin-top: 3rem;
 }

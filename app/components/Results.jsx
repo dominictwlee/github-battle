@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import { battle } from '../utils/api';
 import PlayerPreview from './PlayerPreview';
+import Loading from './Loading';
 
 const Profile = props => {
   const { avatar_url: avatar, name, login, location, followers, following, public_repos: repos, blog } = props.info;
@@ -76,12 +77,12 @@ class Results extends React.Component {
   render() {
     const { error, winner, loser, loading } = this.state;
     if (loading === true) {
-      return <p>LOADING</p>;
+      return <Loading />;
     }
 
     if (error) {
       return (
-        <div>
+        <div className="error-message">
           <p>{error}</p>
           <Link to="/battle">Try Again</Link>
         </div>
