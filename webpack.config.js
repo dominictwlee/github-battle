@@ -1,8 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-module.exports = {
+const config = {
   entry: './app/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -41,3 +43,16 @@ module.exports = {
   ],
   mode: 'development'
 };
+
+if (process.env.NODE_ENV === 'production') {
+  config.plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+      }
+    }),
+    new UglifyJsPlugin()
+  );
+}
+
+module.exports = config;
