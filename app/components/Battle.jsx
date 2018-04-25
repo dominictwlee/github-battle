@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import PlayerPreview from './PlayerPreview';
 import PlayerForm from './PlayerForm';
+import ResetButton from './Reset';
 
 class Battle extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class Battle extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   handleSubmit(id, username) {
@@ -47,9 +49,7 @@ class Battle extends React.Component {
 
           {playerOneImage !== null && (
             <PlayerPreview avatar={playerOneImage} username={playerOneName}>
-              <button className="button button--reset-button" onClick={this.handleReset.bind(null, 'playerOne')}>
-                Reset
-              </button>
+              <ResetButton id="playerOne" handleReset={this.handleReset} />
             </PlayerPreview>
           )}
 
@@ -57,9 +57,7 @@ class Battle extends React.Component {
 
           {playerTwoImage !== null && (
             <PlayerPreview avatar={playerTwoImage} username={playerTwoName}>
-              <button className="button button--reset-button" onClick={this.handleReset.bind(null, 'playerTwo')}>
-                Reset
-              </button>
+              <ResetButton id="playerTwo" handleReset={this.handleReset} />
             </PlayerPreview>
           )}
         </div>
@@ -81,5 +79,13 @@ class Battle extends React.Component {
     );
   }
 }
+
+Battle.propTypes = {
+  match: PropTypes.shape({
+    isExact: PropTypes.bool,
+    path: PropTypes.string,
+    url: PropTypes.string
+  }).isRequired
+};
 
 export default Battle;
