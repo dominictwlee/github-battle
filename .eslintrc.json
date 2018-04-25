@@ -9,7 +9,8 @@
 			"components": ["link"],
 			"specialLink": ["to"],
 			"aspects": ["noHref", "invalidHref", "preferButton"]
-			}]
+			}],
+		"no-underscore-dangle": ["error", { "allowAfterThis": true }]
 	},
 	"plugins": [
 		"prettier"
