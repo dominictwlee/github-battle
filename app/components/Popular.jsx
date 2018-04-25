@@ -84,7 +84,7 @@ class Popular extends React.Component {
     return (
       <div className="popular-body">
         <SelectLanguage selectedLanguage={this.state.selectedLanguage} onSelect={this.updateLanguage} />
-        {!this.state.repos ? <Loading speed={100} /> : <RepoGrid repos={this.state.repos} />}
+        {!this.state.repos ? <Loading /> : <RepoGrid repos={this.state.repos} />}
       </div>
     );
   }

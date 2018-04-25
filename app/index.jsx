@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './minireset.css';
-import './index.css';
+import './css/minireset.css';
+import './css/index.css';
 
 import App from './components/App';
 
